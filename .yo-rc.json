@@ -1,0 +1,7 @@
+{
+  "generator-react-webpack": {
+    "appName": "profileCard",
+    "style": "stylus",
+    "postcss": false
+  }
+}
