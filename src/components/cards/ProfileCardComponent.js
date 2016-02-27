@@ -10,6 +10,7 @@ class ProfileCardComponent extends React.Component {
     return (
       <div className="profilecard-component">
         <div className='basic-list'>
+          <img src='https://scontent-tpe1-1.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/11406875_937421479647598_4549915832928174937_n.jpg?oh=b590f1c6dc027d9a72f5fb6936b16a81&oe=575ACA54'></img>
           <p>Shi Min Shen</p>
         </div>
         <div className='category-list'>
