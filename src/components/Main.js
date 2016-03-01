@@ -7,10 +7,11 @@ import ProfileCard from './cards/ProfileCardComponent.js';
 
 class AppComponent extends React.Component {
   render() {
+    const {actions, cards} = this.props;
     return (
       <div className="index">
         <h1>Profile Card</h1>
-        <ProfileCard/>
+        <ProfileCard nextCardLayer={actions.nextCardLayer} cards={cards}/>
       </div>
     );
   }

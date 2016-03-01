@@ -14,8 +14,8 @@ import Main from '../components/Main';
 /* Populated by react-webpack-redux:reducer */
 class App extends Component {
   render() {
-    const {actions} = this.props;
-    return <Main actions={actions}/>;
+    const {actions, cards} = this.props;
+    return <Main actions={actions} cards={cards}/>;
   }
 }
 /* Populated by react-webpack-redux:reducer
@@ -24,16 +24,17 @@ class App extends Component {
  *       adjust it here.
  */
 App.propTypes = {
-  actions: PropTypes.object.isRequired
+  actions: PropTypes.object.isRequired,
+  cards: PropTypes.object.isRequired
 };
 function mapStateToProps(state) {
   /* Populated by react-webpack-redux:reducer */
-  const props = {};
+  const props = { cards: state.cards };
   return props;
 }
 function mapDispatchToProps(dispatch) {
   /* Populated by react-webpack-redux:action */
-  const actions = {};
+  const actions = { nextCardLayer: require('../actions/cards/nextCardLayer.js') };
   const actionMap = { actions: bindActionCreators(actions, dispatch) };
   return actionMap;
 }

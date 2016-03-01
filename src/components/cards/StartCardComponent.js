@@ -5,7 +5,14 @@ import React from 'react';
 require('styles/cards/StartCard.styl');
 
 class StartCardComponent extends React.Component {
+  handleClickNextLayer = () => {
+    const {nextCardLayer} = this.props;
+    console.log('1');
+    nextCardLayer(1);
+  }
   render() {
+    const {cards} = this.props;
+
     return (
       <div className="startcard-component">
         <div className='basic-list'>
@@ -13,10 +20,14 @@ class StartCardComponent extends React.Component {
           <p>Shi Min Shen</p>
         </div>
         <div className='category-list'>
-          <div className='category'>Apperance<i className="fa fa-angle-right"></i></div>
+          <div onClick={this.handleClickNextLayer} className='category'>Apperance<i className="fa fa-angle-right"></i></div>
           <div className='category'>Personality<i className="fa fa-angle-right"></i></div>
           <div className='category'>Relationship<i className="fa fa-angle-right"></i></div>
           <div className='category'>Job<i className="fa fa-angle-right"></i></div>
+          <div className='category'>Learning experience<i className="fa fa-angle-right"></i></div>
+          <div className='category'>Learning experience<i className="fa fa-angle-right"></i></div>
+          <div className='category'>Learning experience<i className="fa fa-angle-right"></i></div>
+          <div className='category'>Learning experience<i className="fa fa-angle-right"></i></div>
           <div className='category'>Learning experience<i className="fa fa-angle-right"></i></div>
         </div>
         <div className='footer'></div>
