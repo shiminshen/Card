@@ -5,11 +5,17 @@ import React from 'react';
 require('styles/cards/Attribute.styl');
 
 class AttributeComponent extends React.Component {
+
+  handleClick = () => {
+    const {nextCardLayer} = this.props;
+    nextCardLayer(1);
+  }
+
   render() {
-    const {nextCardLayer, name} = this.props;
+    const {name} = this.props;
     return (
-      <div className="attribute-component">
-        <div onClick={nextCardLayer(1)} className='category'>{name}<i className="fa fa-angle-right"></i></div>
+      <div onClick={this.handleClick} className="attribute-component">
+        {name}<i className="fa fa-angle-right"></i>
       </div>
     );
   }
