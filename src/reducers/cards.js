@@ -19,7 +19,13 @@ module.exports = function(state = initialState, action) {
   case 'NEXT_CARD_LAYER': {
     return {
       ...state,
-      layer: action.layer}
+      layer: state.layer + action.layer}
+  }
+
+  case 'PREV_CARD_LAYER': {
+    return {
+      ...state,
+      layer: state.layer - action.layer}
   }
     default: {
       /* Return original state if no actions were consumed. */

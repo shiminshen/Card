@@ -11,7 +11,7 @@ class AppComponent extends React.Component {
     return (
       <div className="index">
         <h1>Profile Card</h1>
-        <ProfileCard nextCardLayer={actions.nextCardLayer} cards={cards}/>
+        <ProfileCard nextCardLayer={actions.nextCardLayer} prevCardLayer={actions.prevCardLayer} cards={cards}/>
       </div>
     );
   }

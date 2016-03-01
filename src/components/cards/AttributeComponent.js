@@ -7,8 +7,8 @@ require('styles/cards/Attribute.styl');
 class AttributeComponent extends React.Component {
 
   handleClick = () => {
-    const {nextCardLayer} = this.props;
-    nextCardLayer(1);
+    let {clickEvent} = this.props;
+    clickEvent(1);
   }
 
   render() {

@@ -9,14 +9,13 @@ require('font-awesome/css/font-awesome.css');
 
 class ProfileCardComponent extends React.Component {
   render() {
-    const {nextCardLayer, cards} = this.props;
-    console.log(cards);
+    const {nextCardLayer, prevCardLayer, cards} = this.props;
     // let page = cards.layer == 0 ?  <StartCard nextCardLayer={nextCardLayer} cards={cards}/>
     //   : <SubCard nextCardLayer={nextCardLayer} cards={cards}/>
 
     return (
       <div>
-        <StartCard nextCardLayer={nextCardLayer} cards={cards}/>
+        <StartCard nextCardLayer={nextCardLayer} prevCardLayer={prevCardLayer} cards={cards}/>
       </div>
     );
   }

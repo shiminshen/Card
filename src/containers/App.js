@@ -34,7 +34,10 @@ function mapStateToProps(state) {
 }
 function mapDispatchToProps(dispatch) {
   /* Populated by react-webpack-redux:action */
-  const actions = { nextCardLayer: require('../actions/cards/nextCardLayer.js') };
+  const actions = {
+    nextCardLayer: require('../actions/cards/nextCardLayer.js'),
+    prevCardLayer: require('../actions/cards/prevCardLayer.js')
+  };
   const actionMap = { actions: bindActionCreators(actions, dispatch) };
   return actionMap;
 }

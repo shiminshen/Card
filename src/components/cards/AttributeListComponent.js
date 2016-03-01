@@ -15,16 +15,18 @@ class AttributeListComponent extends React.Component {
 
     if (cards.layer > 0) {
       // show deeper layer attributes
+
       for (var i = 0, len = 10; i < len; i++) {
         list.push(
-          <Attribute name={'test'} nextCardLayer={nextCardLayer}/>
+          <Attribute name={'test'} clickEvent={nextCardLayer}/>
         );
       }
     } else {
       // show the first layer attributes
+
       for (var i = 0, len = categoryList.length; i < len; i++) {
         list.push(
-          <Attribute name={categoryList[i]} nextCardLayer={nextCardLayer}/>
+          <Attribute name={categoryList[i]} clickEvent={nextCardLayer}/>
         ); 
       }
     }
